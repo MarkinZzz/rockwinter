@@ -1,1 +1,217 @@
-# rockwinter
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<title>登录界面</title>
+	<style type="text/css">
+	#all{
+        margin: 0px;
+        border: 0px;
+		width: 1860px;
+		height: 980px;
+		background: url(back.png);
+        background-repeat: no-repeat;
+	}
+	#content{
+		width: 350px;
+		height: 400px;
+		position: absolute;
+		top: 0px;
+		right: 0px;
+		bottom: 0px;
+		left: 0px;
+		margin: auto;
+		background-color: ;
+	}
+	#username{
+		width: 250px;
+		height: 25px;
+	    position: relative;
+		left: 25px;
+		top: 25px;
+		font-size: 20px;
+	}
+	#password{
+		width: 250px;
+		height: 25px;
+	    position: relative;
+		left: 30px;
+		top: 10px;
+		font-size: 20px;
+
+
+	}
+	#signin{
+		width: 60px;
+		height: 30px;
+		position: absolute;
+		top: 250px;
+		left: 50px;
+		border-radius: 5px;
+	}
+	#signup{
+		width: 60px;
+		height: 30px;
+		position: absolute;
+		top: 250px;
+		left: 200px;
+		border-radius: 5px;
+	}
+	.code{
+        color:blue;
+        font-size:30px;        
+        float:left;
+        width:100px;
+        height:30px;
+        line-height:60px;
+        text-align:center;
+        position: absolute;
+        left: 165px;
+        top: -20px;
+    }
+    a{
+        text-decoration:none;
+        font-size:20px;
+        color: #45D21A;
+        position: absolute;
+        left: 250px;
+        top: 0px;
+    }
+    a:hover{
+       text-decoration:underline;
+    }
+    #form1{
+    	width: 350px;
+    	height: ;
+    	position: absolute;
+    	float: left;
+    	left: 42%;
+    	top: 43%;
+    }
+    #inputCode{
+    	width: 100px;
+    	height: 30px;
+    	position: absolute;
+    	top: -5px;
+    	left: 70px;
+    }
+    table{
+    	width: 350px;
+    	position: absolute;
+    	top: 20px;
+    }
+	@font-face {font-family: 'icon-user';
+    src: url('username/iconfont.eot'); /* IE9*/
+    src: url('username/iconfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('username/iconfont.woff') format('woff'), /* chrome、firefox */
+    url('username/iconfont.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+    url('username/iconfont.svg#iconfont') format('svg'); /* iOS 4.1- */
+    }
+    .icon-user{
+    	font-family:"icon-user" !important;
+        font-size:30px;font-style:normal;
+        -webkit-font-smoothing: antialiased;
+        -webkit-text-stroke-width: 0.2px;
+        -moz-osx-font-smoothing: grayscale;
+        position: relative;
+		left: 25px;
+		top: 25px;
+    }
+    @font-face {font-family: 'icon-lock';
+    src: url('password/iconfont.eot'); /* IE9*/
+    src: url('password/iconfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('password/iconfont.woff') format('woff'), /* chrome、firefox */
+    url('password/iconfont.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+    url('password/iconfont.svg#iconfont') format('svg'); /* iOS 4.1- */
+    }
+    .icon-lock{
+    	font-family:"icon-lock" !important;
+        font-size:40px;font-style:normal;
+        -webkit-font-smoothing: antialiased;
+        -webkit-text-stroke-width: 0.2px;
+        -moz-osx-font-smoothing: grayscale;
+        position: relative;
+		left: -10px;
+		top: 45px;  
+    }
+	</style>
+	<script language="javascript" type="text/javascript">
+
+        var code;
+        function createCode() {
+            code = "";
+            var codeLength = 4; 
+            var checkCode = document.getElementById("checkCode");
+            var codeChars = new Array(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 
+            'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z',
+            'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z');
+            for (var i = 0; i < codeLength; i++) 
+            {
+                var charNum = Math.floor(Math.random() * 52);
+                code += codeChars[charNum];
+            }
+            if (checkCode) 
+            {
+                checkCode.className = "code";
+                checkCode.innerHTML = code;
+            }
+        }
+        function validateCode() 
+        {
+            var inputCode = document.getElementById("inputCode").value;
+            if (inputCode.length <= 0) 
+            {
+                alert("请输入验证码！");
+            }
+            else if (inputCode.toUpperCase() != code.toUpperCase()) 
+            {
+                alert("验证码输入有误！");
+                createCode();
+            }
+            else 
+            {
+                alert("验证码正确！");
+            }        
+        }    
+     </script>
+     <link rel="shortcut icon" href="bitbug_favicon.ico" />
+</head>
+<body onload="createCode()">
+	<div id="all">
+		<form id="content" >
+		    <div id="uername">
+		        <span class="icon-user">&#xe636;</span>
+		    	<input type="text" name="username" id="username" placeholder="用户名">
+		    </div>
+		    <div id="password">
+		    	<span class="icon-lock">&#xe62c;</span>
+		    	<input type="password" name="password" id="password" placeholder="密码">
+		    </div>
+			<div >
+				<input onclick="validateCode()" type="submit" name="dosunmit" id="signin" value="登录">
+			</div>
+			<div>
+				<input type="submit" name="dosubmit" id="signup" value="注册">
+			</div>
+		</form>
+		<form id="form1" runat="server" onsubmit="validateCode()">
+            <div>
+                <table>
+                <tr>
+                    <td> 
+                        <div class="code" id="checkCode" onclick="createCode()" ></div>
+                    </td>
+                    <td>
+                        <a  href="#" onclick="createCode()">换一张</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td >验证码：</td><td><input type="text"   id="inputCode"></td>
+                </tr>
+                
+    </table>
+    </div>
+    </form>
+	</div>
+</body>
+</html>
