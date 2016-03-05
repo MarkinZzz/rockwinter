@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html
+<head lang="en">
+    <meta charset="utf-8">
+	<title>知乎</title>
+	<style type="text/css">
+	#all{
+		position: absolute;
+		top: 0px;
+		right: 0px;
+		bottom: 0px;
+		left: 0px;
+	}
+	#title-bar{
+		width: 100%;
+		height: 50px;
+		position: absolute;
+		background-color: #0F59AE;
+	}
+	#backhomepage{
+		position: absolute;
+		left: 450px;
+		text-decoration:none;
+		font-size: 45px;
+		color: white;
+    }
+    #search{
+    	width: 300px;
+    	height: 30px;
+    	position: absolute;
+		top: 5px;
+		left: 570px;
+		font-size: 20px;
+    }
+    #search-icon{
+    	width: 35px;
+    	height: 35px;
+    	position: absolute;
+    	left: 875px;
+    	top: 5px;
+    	background-color: #2071CE;
+    }
+    #aa{
+    	text-align: center;
+    	position: absolute;
+    	left: 970px;
+    	top: -15px;
+    }
+    #aa li{
+    	list-style-type: none;
+    	display: inline;
+    }
+    #aa li button{
+    	margin: 0px;
+    	border: 0px;
+    	width: 50px;
+    	height: 50px;
+    	background-color: #0F59AE;
+    	font-size: 18px;
+    	color: white;
+    }
+    #aa li button:hover{
+    	background-color: #2071CE;
+    }
+    #quiz{
+    	width: 50px;
+    	height: 40px;
+    	position: absolute;
+    	top:0px; 
+    	left: 500px;
+    }
+    @font-face {font-family: 'search-icon';
+    src: url('search/iconfont.eot'); /* IE9*/
+    src: url('search/iconfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('search/iconfont.woff') format('woff'), /* chrome、firefox */
+    url('search/iconfont.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+    url('search/iconfont.svg#iconfont') format('svg'); /* iOS 4.1- */
+    }
+    .search-icon{
+    font-family:"search-icon" !important;
+    font-size:30px;font-style:normal;
+    color: white;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;}
+	</style>
+</head>
+<body>
+	<div id="all">
+		<div id="title-bar">
+			<a id="backhomepage" href="">知乎</a>
+			<input id="search" placeholder="搜索问题、话题或人"></input>
+			<div id="search-icon">
+				<i class="search-icon">&#xe634;</i>
+			</div>
+			<ul id="aa">
+				<li id="home-page">
+					<button id="btn-home-page">首页</button>
+				</li>
+				<li id="topic">
+					<button id="btn-topic">话题</button>
+				</li>
+				<li id="find">
+					<button id="btn-find">发现</button>
+				</li>
+				<li id="msg">
+					<button id="btn-msg">消息</button>
+				</li>
+				<li id="quiz">
+					<button id="btn-quiz">提问</button>
+				</li>
+				<li id="character">
+					<a href=""></a>
+					<a href=""></a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</body>
+</html>
