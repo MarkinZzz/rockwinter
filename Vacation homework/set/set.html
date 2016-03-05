@@ -1,0 +1,375 @@
+<html>
+<head lang="en">
+    <meta charset="utf-8">
+	<title>设置</title>
+
+<style type="text/css">
+	*{
+        margin: 0px; 
+        padding: 0px; 
+        border: 0px;
+		position: relative;
+		float: left;
+  		text-decoration: none;
+	}
+	#all{
+		position: relative;
+
+		
+	}
+	#menu{
+		width: 1920px;
+		height: 50px;
+		background-color: #0F59AE;
+	}
+	#backhomepage{
+		left: 450px;
+		text-decoration:none;
+		font-size: 45px;
+		color: white;
+    }
+    #search{
+    	width: 300px;
+    	height: 30px;
+		top: 10px;
+		left: 450px;
+		font-size: 20px;
+    }
+    #search-icon{
+    	width: 30px;
+    	height: 30px;
+    	border: 0px;
+    	left: 445px;
+    	top: 10px;
+    	background-color: #2071CE;
+    }
+    #nav{
+    	text-align: center;
+    	left: 500px;
+    	top: 0px;
+    	z-index: 1;
+    }
+    #nav li{
+    	list-style-type: none;
+    	text-align: center;
+    	display: inline;
+    }
+    #nav li a{
+    	width: 100px;
+    	height: 50px;
+        text-align: center;
+    	background-color: #0F59AE;
+    	font-size: 30px;
+    	text-decoration: none;
+    	color: white;
+    }
+    #nav li a:hover{
+    	background-color: #2071CE;
+    }
+    #btn-quiz{
+    	width: 70px;
+    	height: 30px;
+    	border: 0px;
+        top: 10px;
+        left: 550px;
+    	background-color: #2071CE;
+    	font-size: 15px;
+    	color: white;
+    	z-index: 1;
+    }
+    #character{
+        width: 170px;
+        height: 50px;
+        position: absolute;
+        left: 1500px;
+        background-color: red;
+        z-index: 1;
+    }
+    #character-mag{
+        display: ;
+        width: 170px;
+        height: 160px;
+        position: absolute;
+        top: 50px;
+        left: 1500px;
+        background-color: blue;
+        z-index: 1;
+    }
+    #character-mag li{
+        clear: both;
+    }
+    #character-mag li a{
+        line-height: 40px;
+    }
+
+     #link-ctn{
+        width: 500px;
+        height: 50px;
+        position: absolute;
+        top: 800px;
+        left: 400px;
+        text-align: center;
+        z-index: 1
+    }
+    #link-ctn li{
+        list-style-type: none;
+        left: 20px;
+
+    }
+    #link-ctn li a{
+        text-decoration: none;
+        float: 10px;
+        font-size: 15px;
+        color: #8B8282;
+    }
+    #ss{
+        width: 100px;
+        position: absolute;
+        top: 850px;
+        left: 700px;
+        color: #8B8282;
+        z-index: 1;
+    }
+
+    #set-title{
+        top: 30px;
+        left: 500px;
+    }
+    #set-title li {
+        margin-left: 20px;
+    }
+    #set-title li a{
+        font-size: 20px;
+    }
+    #basic-meg{
+        top: 100px;
+        left: 50px;
+    }
+
+    @font-face {font-family: 'search-icon';
+    src: url('search/iconfont.eot'); /* IE9*/
+    src: url('search/iconfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('search/iconfont.woff') format('woff'), /* chrome、firefox */
+    url('search/iconfont.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+    url('search/iconfont.svg#iconfont') format('svg'); /* iOS 4.1- */
+    }
+    .search-icon{
+    font-family:"search-icon" !important;
+    font-size:22px;font-style:normal;
+    color: white;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;}
+
+    @font-face {font-family: 'icon-9';
+    src: url('circle/iconfont.eot'); /* IE9*/
+    src: url('circle/iconfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('circle/iconfont.woff') format('woff'), /* chrome、firefox */
+    url('circle/iconfont.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+    url('circle/iconfont.svg#iconfont') format('svg'); /* iOS 4.1- */}
+    .icon-9{
+    font-family:"icon-9" !important;
+    font-size:17px;font-style:normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+    position: absolute;
+    top: 850px;
+    left: 680px;
+    z-index: 1;
+    color: #8B8282;
+    }
+
+</style>
+</head>
+<body>
+	<div id="all">
+		<div id="menu">
+			<a id="backhomepage" href="">知乎</a>
+			<input id="search" placeholder="搜索问题、话题或人">
+			<button id="search-icon">
+				<i class="search-icon"></i>
+			</button>
+			<ul id="nav">
+				<li id="home-page">
+					<a href="#" >首页</a>
+				</li>
+				<li id="topic">
+					<a href="#" >话题</a>
+				</li>
+				<li id="find">
+					<a href="#" >发现</a>
+				</li>
+				<li id="msg">
+					<a href="#" onclick="displayMsg()">消息</a>
+				</li>
+			</ul>
+            <button id="btn-quiz">提问</button>
+        </div> 
+        <button id="character" >
+           888888888888888
+        </button>>
+         <ul id="character-mag">
+            <li>
+                <i class="icon-11"></i>
+                <a href="#">我的主页</a>
+            </li>
+            <li>
+                <i class="icon-12"></i>
+                <a href="#">私信</a>
+            </li>
+            <li>
+                <i class="icon-13"></i>
+                <a href="#">设置</a>
+            </li>
+            <li>
+                <i class="icon-14"></i>
+                <a href="#">退出</a>
+            </li>
+        </ul>
+        <ul id="link-ctn">
+            <li>
+               <a href="">刘看山</a>
+            </li>
+            <li>
+                <a href="">·知乎指南</a>
+            </li>
+            <li>
+                <a href="">·建议反馈</a>
+            </li>
+            <li>
+                <a href="">·移动应用</a>
+            </li>
+            <li>
+                <a href="">·加入知乎</a>
+            </li>
+            <li>
+                <a href="">·知乎协议</a>
+            </li>
+            <li>
+                <a href="">·商务合作</a>
+            </li>
+        </ul>
+        <i class="icon-9"></i>
+        <p id="ss">2016知乎</p>
+        <div id="set-menu">
+            <ul id="set-title">
+                <li>
+                    <a href="#" class="selected">基本资料</a>
+                </li>
+                <li>
+                    <a href="#" class="">账号和密码</a>
+                </li>
+                <li>
+                    <a href="#" class="">消息和邮件</a>
+                </li>
+                <li>
+                    <a href="#" class="">屏蔽</a>
+                </li>
+                <li>
+                    <a href="#" class="">实验室</a>
+                </li>
+            </ul>
+            <div id="set-menu-on">
+                <div class="tag" style="display: block;">
+                    <form id="basic-meg">
+                     <span>  
+                        <label class="basic-name">姓名</label>
+                        <span id="name">martyee</span>
+                        <a href="#"><i class="icon-14"></i>修改</a>
+                      </span>  
+                      <span> 
+                        <label class="personaly">个性域名</label>
+                        <input class="personaly-change" value="markttyee"></input>
+                        <span>只能修改一次</span>
+                       </span> 
+                       <span>
+                        <label class="protect">隐私保护</label>
+                           
+                        <label class="protect-checkbox">
+                        <input type="checkbox" class="protect-in"></input>
+                        "在站外搜到我在知乎创作的内容时，我的姓名将不会被显示"
+                        </label>
+                        </span>    
+                        <span>   
+                        <a href="#">什么情况在应该使用这个选项？</a>
+                         </span>   
+                        <span>   
+                        <button class="protect-keep">保存</button>
+                      </span>      
+                        
+                    </form>
+                </div>
+                <div class="tag" style="display: none;">
+                    <form>
+                       
+                            56+5+65652
+
+                       
+                    </form>
+                </div>
+                <div class="tag" style="display: none;">
+                    5555
+                </div>
+                <div class="tag" style="display: none;">
+                    6666
+                </div>
+                <div class="tag" style="display: none;">
+                    77777
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <script type="text/javascript">
+            var tabs=function(){
+    function tag(name,elem){
+        return (elem||document).getElementsByTagName(name);
+    }
+    //获得相应ID的元素
+    function id(name){
+        return document.getElementById(name);
+    }
+    function first(elem){
+        elem=elem.firstChild;
+        return elem&&elem.nodeType==1? elem:next(elem);
+    }
+    function next(elem){
+        do{
+            elem=elem.nextSibling;  
+        }while(
+            elem&&elem.nodeType!=1  
+        )
+        return elem;
+    }
+    return {
+        set:function(elemId,tabId){
+            var elem=tag("li",id(elemId));
+            var tabs=tag("div",id(tabId));
+            var listNum=elem.length;
+            var tabNum=tabs.length;
+            for(var i=0;i<listNum;i++){
+                    elem[i].onclick=(function(i){
+                        return function(){
+                            for(var j=0;j<tabNum;j++){
+                                if(i==j){
+                                    tabs[j].style.display="block";
+                                    //alert(elem[j].firstChild);
+                                    elem[j].firstChild.className="selected";
+                                }
+                                else{
+                                    tabs[j].style.display="none";
+                                    elem[j].firstChild.className="";
+                                }
+                            }
+                        }
+                    })(i)
+            }
+        }
+    }
+}();
+tabs.set("set-title","set-menu-on");//执行
+
+    </script>
+ </body>
+ </html>          
